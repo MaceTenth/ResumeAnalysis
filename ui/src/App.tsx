@@ -9,7 +9,7 @@ import useDebounce from "./useDebounce";
 
 type Sentiment = 1 | 0 | -1;
 
-function Emoji({ sentiment }: { sentiment: Sentiment }) {
+function Emoticon({ sentiment }: { sentiment: Sentiment }) {
   if (sentiment === 1) {
     return <img src={positive} className="emoji" />;
   }
@@ -48,7 +48,7 @@ function App() {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <Emoji sentiment={sentiment} />
+      <Emoticon sentiment={sentiment} />
     </div>
   );
 }
